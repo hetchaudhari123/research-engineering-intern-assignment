@@ -27,8 +27,8 @@ This feature displays the **top 10 most occurring flair types** from the posts i
 - Users can **adjust the number of top flairs** displayed using a numeric input field.
 - A dropdown allows users to **highlight a specific flair** and view its exact contribution.
 
-![Alt Text](first_1.png)  
-![Alt Text](first_2.png)  
+![Alt Text](1_1.png)  
+![Alt Text](1_2.png)  
 
 ---
 
@@ -40,7 +40,7 @@ This feature visualizes the percentage of Reddit posts created by **premium** us
 
 The dashboard visualizes this data through a **pie chart**, making it easy for users to understand the proportion of content contributed by premium vs non-premium users.
 
-![Alt Text](second_feature.png)  
+![Alt Text](2.png)  
 
 ---
 
@@ -52,7 +52,7 @@ This feature visualizes the proportion of posts that contain **external links** 
 
 The dashboard represents this data using a **pie chart**, providing a clear comparison between posts with and without external links.
 
-![Alt Text](3rd.png)  
+![Alt Text](3.png)  
 
 ---
 
@@ -67,7 +67,7 @@ This histogram visualizes the **distribution of aspect ratios** for thumbnails i
 
 This analysis helps understand **how thumbnails are structured** across Reddit posts and whether certain aspect ratios dominate the platform.
 
-![Distribution of Thumbnail Aspect Ratios](image.png)  
+![Distribution of Thumbnail Aspect Ratios](4.png)  
 
 ---
 
@@ -80,7 +80,7 @@ This feature visualizes the **most frequent thumbnail sizes** in the dataset.
 
 This visualization helps identify the most commonly used thumbnail dimensions in Reddit posts.
 
-![Alt Text](4th.png)  
+![Alt Text](5.png)  
 
 ---
 
@@ -105,7 +105,7 @@ This visualization allows users to explore the **top flairs ranked by average th
   - **Flair name**
   - **Average thumbnail size**
 
-![Alt Text](5th.png)  
+![Alt Text](6.png)  
 
 ---
 
@@ -127,7 +127,7 @@ This pie chart provides a **visual representation of the proportion of NSFW (Not
 
 This visualization helps understand the **balance between safe and explicit content**, allowing users to analyze the distribution effectively.
 
-![NSFW vs. SFW Content](6th.png)  
+![NSFW vs. SFW Content](7.png)  
 
 ---
 
@@ -146,7 +146,7 @@ This feature allows users to ask questions about the dataset and receive instant
 **Chatbot Response:**  
 The trend of the flairs in the dataset is that the majority of the posts have an 'Unknown' flair, followed by 'Flaired Users Only' and 'Discussion'. There are 136 unique flairs in the dataset, but most of them have a very low count.
 
-![Chatbot](7th.png)  
+![Chatbot](8.png)  
 
 ---
 
