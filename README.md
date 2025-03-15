@@ -56,7 +56,22 @@ The dashboard represents this data using a **pie chart**, providing a clear comp
 
 ---
 
-### **4. Top 10 Most Common Thumbnail Sizes**
+### **4. Distribution of Thumbnail Aspect Ratios (Width-to-Height)**
+This histogram visualizes the **distribution of aspect ratios** for thumbnails in the dataset.
+
+#### **Key Details**
+- The **x-axis** represents the **aspect ratio** (width divided by height).
+- The **y-axis** represents the **frequency** of posts with that aspect ratio.
+- Most thumbnails have an aspect ratio between **1 and 2**, with a significant peak around **1.5**.
+- There are a few outliers with aspect ratios as high as **8**.
+
+This analysis helps understand **how thumbnails are structured** across Reddit posts and whether certain aspect ratios dominate the platform.
+
+![Distribution of Thumbnail Aspect Ratios](image.png)  
+
+---
+
+### **5. Top 10 Most Common Thumbnail Sizes**
 This feature visualizes the **most frequent thumbnail sizes** in the dataset.
 
 - The **x-axis** represents the **width** of the thumbnails.
@@ -69,7 +84,7 @@ This visualization helps identify the most commonly used thumbnail dimensions in
 
 ---
 
-### **5. Dynamic Flair Selection and Highlighting**
+### **6. Dynamic Flair Selection and Highlighting**
 This visualization allows users to explore the **top flairs ranked by average thumbnail size** with two key interactive features:
 
 #### **Features**
@@ -94,7 +109,7 @@ This visualization allows users to explore the **top flairs ranked by average th
 
 ---
 
-### **6. Proportion of NSFW vs. SFW Content**
+### **7. Proportion of NSFW vs. SFW Content**
 This pie chart provides a **visual representation of the proportion of NSFW (Not Safe For Work) vs. SFW (Safe For Work) content**.
 
 #### **Understanding the Chart**
@@ -116,7 +131,7 @@ This visualization helps understand the **balance between safe and explicit cont
 
 ---
 
-### **7. Chatbot Dataset Query**
+### **8. Chatbot Dataset Query**
 This feature allows users to ask questions about the dataset and receive instant insights. The chatbot processes user queries and returns relevant trends, distributions, and summaries based on the dataset.
 
 #### **Functionality**
