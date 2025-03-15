@@ -3,7 +3,7 @@
 This project presents an **interactive dashboard** and an **AI-powered chatbot** built using **Streamlit**, which helps users explore and analyze a cleaned dataset of Reddit posts. The dashboard offers insightful **visualizations** and **filters**, while the chatbot allows users to query information about the dataset dynamically.
 
 ## **Dataset Overview**
-The cleaned dataset consists of **8,205 Reddit posts** with key attributes such as:
+The cleaned dataset (after preprocessing) consists of **8,205 Reddit posts** with key attributes such as:
 - **Post Flair** (`link_flair_text`): Categorization of the post.
 - **Thumbnail Dimensions** (`thumbnail_width`, `thumbnail_height`): Image metadata.
 - **Post Type** (`post_hint`): Whether the post is a link, image, or text.
@@ -147,6 +147,77 @@ This feature allows users to ask questions about the dataset and receive instant
 The trend of the flairs in the dataset is that the majority of the posts have an 'Unknown' flair, followed by 'Flaired Users Only' and 'Discussion'. There are 136 unique flairs in the dataset, but most of them have a very low count.
 
 ![Chatbot](8.png)  
+
+---
+
+## 🗂 1. Data Handling & Preprocessing  
+
+### 🔹 Why Pandas?  
+- **Efficient Data Handling**: The dataset contains **8,205 Reddit posts** after preprocessing, making **pandas** an ideal choice for **loading, filtering, and aggregating** data.  
+- **Data Cleaning**: Unnecessary columns are dropped, missing values are handled, and categorical values are processed for effective visualization.  
+
+### 📊 Final Processed Dataset Overview  
+
+| **Feature** | **Description** |
+|------------|----------------|
+| **Post Flair (`link_flair_text`)** | Categorization of the post. |
+| **Thumbnail Dimensions (`thumbnail_width`, `thumbnail_height`)** | Image metadata of the post. |
+| **Post Type (`post_hint`)** | Indicates whether the post is a link, image, or text. |
+| **Content URL (`url_overridden_by_dest`)** | External link associated with the post (if available). |
+| **Maturity Rating (`over_18`)** | Whether the post is NSFW (Not Safe For Work). |
+| **Author Information (`author_premium`, `author_fullname`)** | Metadata about the post creator. |
+| **Media Type (`media_only`)** | Specifies if the post contains only media. |
+
+---
+
+## 📊 2. Dashboard Visualization (Streamlit + Plotly)  
+
+### 🔹 Why Streamlit?  
+- **Lightweight and Interactive**: No need for complex web frameworks.  
+- **Supports Real-time Updates**: Widgets like sliders and dropdowns allow users to dynamically adjust filters.  
+- **Easier Deployment**: Can be hosted quickly on platforms like Streamlit Cloud.  
+
+### 🔹 Why Plotly?  
+- **Interactive Graphs**: Users can hover over, zoom in, and select data points dynamically.  
+- **Supports Multiple Chart Types**: Bar charts, pie charts, and scatter plots help explore various data trends.  
+
+### 📈 Graph Selection & Thought Process  
+
+| **Feature** | **Graph Type** | **Why this choice?** |
+|------------|--------------|----------------|
+| **Flair Analysis** | Bar Chart | Helps visualize the **top 10 most used flairs**, making it easy to see content distribution. |
+| **Premium vs Non-Premium Posts** | Pie Chart | Clearly represents the **percentage of posts** contributed by premium users. |
+| **External vs Non-External Links** | Pie Chart | Allows quick comparison of posts containing **external links vs. internal posts**. |
+| **Thumbnail Size Distribution** | Scatter Plot | Showcases the most **common thumbnail dimensions**, helping understand Reddit’s media trends. |
+| **NSFW vs SFW Content** | Pie Chart | Quickly highlights the proportion of **safe vs. explicit content**, which is a key concern for Reddit users. |
+| **Distribution of Thumbnail Aspect Ratio** | Histogram | Helps visualize the distribution of **width-to-height ratios**, identifying common media aspect ratios. |
+| **Top N Flair Types by Avg. Thumbnail Size** | Bar Chart | Displays which flairs have the **largest average thumbnail size**, providing insights into post media trends. |
+
+---
+
+## 🤖 3. AI Chatbot Integration (LangChain + Groq)  
+
+### 🔹 Why LangChain?  
+- Allows users to **query the dataset using natural language** instead of manual filtering.  
+- Uses **LLMs (Large Language Models) from Groq** to generate intelligent responses.  
+- The `create_csv_agent` function enables direct **data-driven responses** based on CSV analysis.  
+
+### 🔍 How the Chatbot Works  
+1. **User inputs a question** (e.g., “What is the trend of flairs in the dataset?”).  
+2. **LangChain CSV Agent** processes the request and extracts relevant information from the dataset.  
+3. **Groq’s LLM** formulates a human-readable response with insights from the data.  
+4. **Output is displayed** within the Streamlit app.  
+
+---
+
+## 🏗 4. System Architecture  
+
+### 🛠 Overall Flow:  
+1. **Data Ingestion** → Load CSV with pandas.  
+2. **Data Processing** → Filter, clean, and prepare data for visualization.  
+3. **Visualization Layer** → Streamlit + Plotly for an interactive UI.  
+4. **AI Chatbot** → LangChain + Groq for dataset querying.  
+5. **Deployment** → Hosted using Streamlit Cloud.  
 
 ---
 
